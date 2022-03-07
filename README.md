@@ -63,17 +63,12 @@ print(dict_363)
 
 ### Testes
 
-Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1pImzgGr7pQF5TkbA3WOSC-0qqFuojwiK?usp=sharing).
+Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1BTUYs3Nwdfm5V3KIEB57lWtNT1R7_RJb?usp=sharing).
 
 <br>
-
------
-
 
 ------
 
 ### *TODO*
 
-1. Tabular Valores
-2. Talvez com *dict* baste, visto tratar-se de apenas um parâmetro
-
+1. ...

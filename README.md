@@ -2,7 +2,7 @@
 
 <br>
 
-Decisão de Diretoria da CETESB que substitui parâmetro Coliformes Termotolerantes por E. coli.
+Decisão de Diretoria da CETESB que substitui parâmetro Coliformes Termotolerantes por *Escherichia coli*.
 
 <br>
 

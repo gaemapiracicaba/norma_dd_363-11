@@ -1,5 +1,9 @@
 # Decisão de Diretoria CETESB 363/11
 
+[![Publish Python 🐍 distributions 📦 to PyPI](https://github.com/gaemapiracicaba/norma_dd_363_11/actions/workflows/publish-to-pypi.yml/badge.svg)](https://github.com/gaemapiracicaba/norma_dd_363_11/actions/workflows/publish-to-pypi.yml)
+<br>
+[![Publish Python 🐍 distributions 📦 to TestPyPI](https://github.com/gaemapiracicaba/norma_dd_363_11/actions/workflows/publish-to-test-pypi.yml/badge.svg)](https://github.com/gaemapiracicaba/norma_dd_363_11/actions/workflows/publish-to-test-pypi.yml)
+
 <br>
 
 Decisão de Diretoria da CETESB que substitui parâmetro Coliformes Termotolerantes por *Escherichia coli*.

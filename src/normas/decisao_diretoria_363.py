@@ -60,6 +60,38 @@ def filter_by_parameters(df_363, parametro):
         return 'erro'
 
 
+def filter_by_parameters(df_363, parametro, condicao=None):
+    # Filter dataframe by Parametro
+    df_363 = df_363.loc[(df_363['parametro_descricao'] == parametro)]
+
+    # Condição
+    array = df_363['condicao'].values
+    dict_condicao = dict(enumerate(array.flatten(), 1))
+
+    # Check and Get Results
+    if len(df_363) == 1 and len(array) == 1:
+        dict_363 = df_363.to_dict(orient='records')[0]
+        dict_363 = OrderedDict(sorted(dict_363.items(), key=lambda x: df_363.columns.get_loc(x[0])))
+        return dict_363
+
+    elif len(df_363) > 1 and len(array) > 1 and condicao is not None:
+        try:
+            # Filtra a Condição
+            #condicao = df_357['condicao'].values[condicao]
+            df_363 = df_363.loc[(df_363['condicao'] == dict_condicao[int(condicao)])]
+            dict_363 = df_363.to_dict(orient='records')[0]
+            dict_363 = OrderedDict(sorted(dict_363.items(), key=lambda x: df_363.columns.get_loc(x[0])))
+            return dict_363
+        except Exception as e:
+            #print(e)
+            print('A condição definida foi "{}".\nAs opções possíveis são:\n'.format(condicao))
+            print(*('{} - {}'.format(k, v) for k,v in dict_condicao.items()), sep='\n')
+
+    else:
+        print('Parâmetro "{}" tem mais de um registro.\nFaz-se necessário definir condição!\n'.format(parametro))
+        print(*('{} - {}'.format(k, v) for k,v in dict_condicao.items()), sep='\n')
+
+
 def set_type_desconformidade(dict_363):
     if pd.isnull(dict_363['valor_minimo_permitido']) & pd.notnull(dict_363['valor_maximo_permitido']):
         #print('Parâmetro só tem "valor máximo". Caso o valor medido esteja acima, é amostra desconforme!')
@@ -113,4 +145,7 @@ def evaluate_result(valor, dict_363):
         result_363 = 'erro'
 
     return result_363
+
+
+
 

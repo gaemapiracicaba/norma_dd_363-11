@@ -115,9 +115,6 @@ def set_type_desconformidade(dict_363):
     return tipo_363
 
 
-dict_363['valor_maximo_permitido']
-
-
 def evaluate_result(valor, dict_363):
     # Get type
     tipo_363 = set_type_desconformidade(dict_363)

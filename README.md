@@ -6,8 +6,13 @@
 
 <br>
 
-Decisão de Diretoria da CETESB que substitui parâmetro Coliformes Termotolerantes por *Escherichia coli*.
-
+Por meio da Decisão de Diretoria da CETESB nº 363 de 07.12.2011, que 
+*"dispõe sobre a adoção do parâmetro E.coli, para avaliação da qualidade
+dos corpos de águas do território do Estado de São Paulo"*, é adotado o 
+parâmetro *Escherichia coli* em substituição aos Coliformes Termotolerantes,
+estabelecidos pelas Resoluções CONAMA nº 357/2005, de 17.03.2005, e 274/2000, 
+de 29.11.2000.
+ 
 <br>
 
 ----
@@ -31,6 +36,39 @@ pip3 install decisao-diretoria-363 --upgrade
 ```
 
 <br>
+
+----
+
+### Como Usar?
+
+<br>
+
+```python
+from normas import decisao_diretoria_363
+
+# Get Table
+df_363, list_classes = decisao_diretoria_363.get_parameters()
+
+# Filter Data by "Classe"
+df_363, list_parametros = decisao_diretoria_363.filter_by_classe(df_363, classe='Classe 3')
+
+# Filter Data by "Parâmetro", quando tem condições distintas!
+dict_363 = decisao_diretoria_363.filter_by_parameters(df_363, parametro='Escherichia coli', condicao=1)
+print(dict_363)
+```
+
+<br>
+
+-----
+
+### Testes
+
+Caso queira testar, segue um [*Google Colab*](https://colab.research.google.com/drive/1pImzgGr7pQF5TkbA3WOSC-0qqFuojwiK?usp=sharing).
+
+<br>
+
+-----
+
 
 ------
 

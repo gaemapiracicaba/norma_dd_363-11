@@ -6,7 +6,7 @@
 
 <br>
 
-Por meio da [Decisão de Diretoria da CETESB](https://github.com/gaemapiracicaba/norma_dd_363_11/blob/main/docs/2011.12.07%20-+Decisão+Diretoria+363+-+E+coli.pdf) nº 363 de 07.12.2011, que 
+Por meio da [Decisão de Diretoria da CETESB](https://github.com/gaemapiracicaba/norma_dd_363_11/blob/main/docs/2011.12.07%20-%20Decisão%20Diretoria%20363%20-%20E%20coli.pdf) nº 363 de 07.12.2011, que 
 *"dispõe sobre a adoção do parâmetro E.coli, para avaliação da qualidade
 dos corpos de águas do território do Estado de São Paulo"*, é adotado o 
 parâmetro *Escherichia coli* em substituição aos Coliformes Termotolerantes,

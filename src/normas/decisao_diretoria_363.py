@@ -26,7 +26,6 @@ def get_parameters():
 
     # Filter only quality
     df_363 = df_363.loc[(df_363['tipo_padrao'] == 'qualidade')]
-    #print(df_8468.head())
 
     # Classes
     list_classes = list(set(df_363['padrao_qualidade']))
@@ -47,17 +46,17 @@ def filter_by_classe(df_363, classe):
     return df_363, list_parametros
 
 
-def filter_by_parameters(df_363, parametro):
-    # Filter dataframe by Parametro
-    df_363 = df_363.loc[(df_363['parametro_descricao'] == parametro)]
-
-    # Check and Get Results
-    if len(df_363) == 1:
-        dict_363 = df_363.to_dict(orient='records')[0]
-        dict_363 = OrderedDict(sorted(dict_363.items(), key=lambda x: df_363.columns.get_loc(x[0])))
-        return dict_363
-    else:
-        return 'erro'
+# def filter_by_parameters(df_363, parametro):
+#     # Filter dataframe by Parametro
+#     df_363 = df_363.loc[(df_363['parametro_descricao'] == parametro)]
+#
+#     # Check and Get Results
+#     if len(df_363) == 1:
+#         dict_363 = df_363.to_dict(orient='records')[0]
+#         dict_363 = OrderedDict(sorted(dict_363.items(), key=lambda x: df_363.columns.get_loc(x[0])))
+#         return dict_363
+#     else:
+#         return 'erro'
 
 
 def filter_by_parameters(df_363, parametro, condicao=None):
